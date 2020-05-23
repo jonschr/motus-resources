@@ -29,3 +29,11 @@ define( 'ELODIN_RESOURCES', dirname( __FILE__ ) );
 
 // Define the version of the plugin
 define ( 'ELODIN_RESOURCES_VERSION}}', '0.1' );
+
+
+// Basic setup
+require_once( 'lib/post_type.php' );
+require_once( 'lib/tax.php' ); 
+
+// Layout
+require_once( 'layout/resources.php');
