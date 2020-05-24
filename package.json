@@ -1,0 +1,27 @@
+{
+  "name": "elodin-resources",
+  "version": "1.0.0",
+  "description": "Just another gated resource plugin.",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonschr/elodin-resources.git"
+  },
+  "author": "Jon Schroeder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonschr/elodin-resources/issues"
+  },
+  "homepage": "https://github.com/jonschr/elodin-resources#readme",
+  "dependencies": {
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
