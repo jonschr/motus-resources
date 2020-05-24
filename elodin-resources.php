@@ -51,3 +51,16 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 
 // Optional: Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('master');
+
+
+add_action( 'wp_enqueue_scripts', 'elodin_resources_enqueue' );
+function elodin_resources_enqueue() {
+	
+	// Plugin styles
+    wp_register_style( 'elodin-resources', plugin_dir_url( __FILE__ ) . 'css/elodin-resources.css', array(), ELODIN_RESOURCES_VERSION, 'screen' );
+    
+    // Script
+    // wp_register_script( 'slick-init', plugin_dir_url( __FILE__ ) . 'js/slick-init.js', array( 'slick-main' ), REDBLUE_SECTIONS_VERSION, true );
+	
+	
+}

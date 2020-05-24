@@ -1,9 +1,9 @@
 <?php
 
 //* Output resources before
-// add_action( 'before_loop_layout_resources', 'rb_resources_before' );
-function rb_resources_before( $args ) {
-	// wp_enqueue_script( 'SCRIPTHANDLE' );
+add_action( 'before_loop_layout_resources', 'elodin_resources_before' );
+function elodin_resources_before( $args ) {
+	wp_enqueue_style( 'elodin-resources' );
 }
 
 //* Output each resources
