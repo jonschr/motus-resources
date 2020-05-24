@@ -7,15 +7,31 @@
         display: flex;
         position: relative;
         align-items: center;
+
+        @include mobile {
+            flex-flow: row wrap;
+        }
     }
 
     .featured-wrap,
     .inner {
         flex: 0 1 auto;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     .featured-wrap {
         min-width: 400px;
+
+        @include tablet {
+            min-width: 300px;
+        }
+
+        @include mobile {
+            min-width: auto;
+        }
     }
 
     .featured-image {
@@ -23,11 +39,19 @@
         padding-top: 65%;
         width: 100%;
         background-size: cover;
+
+        @include mobile {
+            padding-top: 50%;
+        }
     }
 
     .inner {
         width: 100%;
         padding: 40px;
+
+        @include mobile {
+            padding: 20px;
+        }
     }
 
     .excerpt {
@@ -37,6 +61,23 @@
         -webkit-line-clamp: 3;
         /* number of lines to show */
         -webkit-box-orient: vertical;
+
+        @include notdesktop {
+            -webkit-line-clamp: 2;
+        }
+    }
+
+    h3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
+
+        @include notdesktop {
+            -webkit-line-clamp: 2;
+        }
     }
 
     a.overlay {
