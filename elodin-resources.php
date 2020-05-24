@@ -3,7 +3,7 @@
 	Plugin Name: Elodin Resources
 	Plugin URI: https://elod.in
     Description: Just another gated content resource library plugin
-	Version: 0.1
+	Version: 0.2
     Author: Jon Schroeder
     Author URI: https://elod.in
 
@@ -28,12 +28,26 @@ if ( !defined( 'ABSPATH' ) ) {
 define( 'ELODIN_RESOURCES', dirname( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'ELODIN_RESOURCES_VERSION}}', '0.1' );
+define ( 'ELODIN_RESOURCES_VERSION', '0.2' );
 
 
 // Basic setup
 require_once( 'lib/post_type.php' );
 require_once( 'lib/tax.php' ); 
 
+// Locking/unlocking logic
+require_once( 'lib/locking-and-unlocking.php' );
+
 // Layout
 require_once( 'layout/resources.php');
+
+// Updater
+require 'vendor/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/jonschr/elodin-resources',
+	__FILE__,
+	'elodin-resources'
+);
+
+// Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
