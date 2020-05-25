@@ -1,0 +1,17 @@
+.resources-widget-wrap-after {
+    padding: 150px 30px;
+    text-align: center;
+
+    @include tablet {
+        padding: 75px 30px;
+    }
+
+    @include mobile {
+        padding: 30px;
+    }
+
+    .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

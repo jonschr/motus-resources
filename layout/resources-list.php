@@ -1,24 +1,25 @@
 <?php
 
 //* Output resources before
-add_action( 'before_loop_layout_resources', 'elodin_resources_before' );
-function elodin_resources_before( $args ) {
+add_action( 'before_loop_layout_resources_list', 'elodin_resources_list_before' );
+function elodin_resources_list_before( $args ) {
 	wp_enqueue_style( 'elodin-resources' );
 }
 
 //* Output each resources
-add_action( 'add_loop_layout_resources', 'elodin_resources_each' );
-function elodin_resources_each() {
+add_action( 'add_loop_layout_resources_list', 'elodin_resources_list_each' );
+function elodin_resources_list_each() {
 
     //* vars
 	$id = get_the_ID();
     $title = get_the_title();
+    $excerpt = apply_filters( 'the_content', get_the_excerpt() );
     
     //* markup
     printf( '<a class="overlay" href="%s"></a>', get_the_permalink() );
     
-    // if ( has_post_thumbnail() ) 
-    //     printf( '<div class="featured-wrap"><div class="featured-image" style="background-image:url( %s )"></div></div>', get_the_post_thumbnail_url( $id, 'large' ) );
+    if ( has_post_thumbnail() ) 
+        printf( '<div class="featured-wrap"><div class="featured-image" style="background-image:url( %s )"></div></div>', get_the_post_thumbnail_url( $id, 'large' ) );
     
 
     echo '<div class="inner">';
@@ -28,6 +29,9 @@ function elodin_resources_each() {
 
             if ( $title )
                 printf( '<h3>%s</h3>', $title );
+
+            if ( $excerpt )
+                printf( '<div class="excerpt">%s</div>', $excerpt );
 
         echo '</div>';
 

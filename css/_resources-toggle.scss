@@ -1,0 +1,17 @@
+.resourceselection {
+    text-align: center;
+    margin: 0 0 35px;
+    padding: 0;
+
+    li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px 20px;
+    }
+}
+
+.loop-container {
+    .hideresource {
+        display: none;
+    }
+}

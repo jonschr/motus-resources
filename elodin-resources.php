@@ -35,11 +35,18 @@ define ( 'ELODIN_RESOURCES_VERSION', '0.2' );
 require_once( 'lib/post_type.php' );
 require_once( 'lib/tax.php' ); 
 
+// Layout adjustments on single (adding widget area, etc.)
+require_once( 'lib/single-resources-modifications.php' );
+
+// Adding the filter/toggle
+require_once( 'lib/resources-toggle.php' );
+
 // Locking/unlocking logic
 require_once( 'lib/locking-and-unlocking.php' );
 
 // Layout
 require_once( 'layout/resources.php');
+require_once( 'layout/resources-list.php');
 
 // Updater
 require 'vendor/plugin-update-checker/plugin-update-checker.php';
@@ -57,7 +64,7 @@ add_action( 'wp_enqueue_scripts', 'elodin_resources_enqueue' );
 function elodin_resources_enqueue() {
 	
 	// Plugin styles
-    wp_register_style( 'elodin-resources', plugin_dir_url( __FILE__ ) . 'css/elodin-resources.css', array(), ELODIN_RESOURCES_VERSION, 'screen' );
+    wp_enqueue_style( 'elodin-resources', plugin_dir_url( __FILE__ ) . 'css/elodin-resources.css', array(), ELODIN_RESOURCES_VERSION, 'screen' );
     
     // Script
     // wp_register_script( 'slick-init', plugin_dir_url( __FILE__ ) . 'js/slick-init.js', array( 'slick-main' ), REDBLUE_SECTIONS_VERSION, true );

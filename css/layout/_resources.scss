@@ -1,104 +1,16 @@
 .loop-container.loop-layout-resources {
+
     .entry {
-        background-color: white;
-    }
-
-    .loop-item-inner {
-        display: flex;
         position: relative;
-        align-items: center;
-
-        @include mobile {
-            flex-flow: row wrap;
-        }
-    }
-
-    .featured-wrap,
-    .inner {
-        flex: 0 1 auto;
-
-        @include mobile {
-            width: 100%;
-        }
-    }
-
-    .featured-wrap {
-        min-width: 400px;
-
-        @include tablet {
-            min-width: 300px;
-        }
-
-        @include mobile {
-            min-width: auto;
-        }
-    }
-
-    .featured-image {
-        height: 0;
-        padding-top: 65%;
-        width: 100%;
-        background-size: cover;
-
-        @include mobile {
-            padding-top: 50%;
-        }
-    }
-
-    .inner {
-        width: 100%;
-        padding: 40px;
-
-        @include mobile {
-            padding: 20px;
-        }
-    }
-
-    .excerpt {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        /* number of lines to show */
-        -webkit-box-orient: vertical;
-
-        @include notdesktop {
-            -webkit-line-clamp: 2;
-        }
-    }
-
-    h3 {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        /* number of lines to show */
-        -webkit-box-orient: vertical;
-
-        @include notdesktop {
-            -webkit-line-clamp: 2;
-        }
-    }
-
-    a.overlay {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 10;
-    }
-
-    a.post-edit-link {
-        position: absolute;
-        left: 10px;
-        bottom: 10px;
-        z-index: 20;
-        color: white;
+        padding: 20px;
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 0 10px 0 rgba(black, 0.07);
+        transition: .3s all ease;
     }
 
     .entry:hover {
-        box-shadow: 0 0 10px 0 rgba(black, 0.07);
+        box-shadow: 0 0 10px 0 rgba(black, 0.15);
     }
 
 

@@ -9,6 +9,7 @@ function elodin_resources_register_taxonomies() {
 			'label' => __( 'Resource Categories' ),
 			'rewrite' => array( 'slug' => 'resourcecategories' ),
 			'hierarchical' => true,
+			'show_in_rest' => true,
 		)
 	);
 }

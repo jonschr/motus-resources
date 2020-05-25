@@ -46,4 +46,7 @@ $wide: 1200px;
    Imports
    ========================================================================== */
 
+@import 'single-resources.scss';
+@import 'resources-toggle.scss';
 @import 'layout/resources.scss';
+@import 'layout/resources-list.scss';
