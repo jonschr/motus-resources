@@ -1,3 +1,9 @@
+### 1.0.1
+* Verifying that updates work
+
+### 1.0 
+* Adding updates capability
+
 ### 0.2.2
 * Bugfix: the columns resource layout wasn't working properly with filters
 
