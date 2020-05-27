@@ -3,7 +3,7 @@
 	Plugin Name: Elodin Resources
 	Plugin URI: https://elod.in
     Description: Just another gated content resource library plugin
-	Version: 0.2
+	Version: 0.2.1
     Author: Jon Schroeder
     Author URI: https://elod.in
 
